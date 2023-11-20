@@ -5,6 +5,7 @@ Created on Mon Nov 13 14:26:57 2023
 @author: student
 """
 
+
 class Property:
     def __init__(self, area, rooms, price, address):
         self.area = area
