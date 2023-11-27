@@ -5,6 +5,7 @@ Created on Mon Nov 13 14:03:08 2023
 @author: student
 """
 
+
 class Library:
     def __init__(self, city, street, zip_code, open_hours, phone):
         self.city = city
@@ -15,7 +16,8 @@ class Library:
 
     def __str__(self):
         return "Library: " + self.city + ", " + self.street + "\nZip Code: " + self.zip_code + "\nOpen Hours: " + self.open_hours + "\nPhone: " + self.phone
-    
+
+
 class Employee:
      def __init__(self, first_name, last_name, hire_date, birth_date, city, street, zip_code, phone):
         self.first_name = first_name
@@ -26,9 +28,9 @@ class Employee:
         self.street = street
         self.zip_code = zip_code
         self.phone = phone
-   
-     def __str__(self):
+     def__str__(self):
         return "Employee: " + self.first_name + " " + self.last_name + "\nHire Date: " + self.hire_date + "\nBirth Date: " + self.birth_date + "\nAddress: " + self.city + ", " + self.street + ", " + self.zip_code + "\nPhone: " + self.phone
+
 
 class Book:
     def __init__(self, library, publication_date, author_name, author_surname, number_of_pages):
@@ -40,17 +42,20 @@ class Book:
 
     def __str__(self):
         return "Book: " + self.author_name + " " + self.author_surname + "\nPublished on: " + self.publication_date + "\nPages: " + str(self.number_of_pages) + "\nAvailable at: " + str(self.library)
-    
+
+
 class Order:
     def __init__(self, employee, student, books, order_date):
         self.employee = employee
         self.student = student
         self.books = books
         self.order_date = order_date
-        
+
     def __str__(self):
+
         book_list = "\n".join(["- " + book.author_name + " " + book.author_surname for book in self.books])
         return "Order by " + self.employee.first_name + " " + self.employee.last_name + " for " + str(self.student) + "\nDate: " + self.order_date + "\nBooks:\n" + book_list
+
 
 libraries = [
     Library("City ABC", "Street 1", "12345", "8 - 16", "123-456-7590"),
